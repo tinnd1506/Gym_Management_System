@@ -1,5 +1,20 @@
 {
-	"memberships": [],
-	"classes": [],
-	"trainers": []
+  "memberships": [
+    {
+      "id": "1731671691848",
+      "memberId": "12345",
+      "startDate": "2023-01-01",
+      "endDate": "2024-01-01",
+      "type": "monthly"
+    },
+    {
+      "id": "1731671702696",
+      "memberId": "12345",
+      "startDate": "2023-01-01",
+      "endDate": "2024-01-01",
+      "type": "monthly"
+    }
+  ],
+  "classes": [],
+  "trainers": []
 }

@@ -1,39 +1,69 @@
+const axios = require('axios');
+const BASE_URL = 'http://localhost:5001'; // Base URL for json-server
+
 class Database {
-	constructor() {
-		this.memberships = []; // Array to store memberships
-		this.classes = [];      // Array to store classes
-		this.trainers = [];     // Array to store trainers
-	}
+    // Membership methods
+    async getMemberships() {
+        try {
+            const response = await axios.get(`${BASE_URL}/memberships`);
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching memberships:', error.message);
+            throw error;
+        }
+    }
 
-	// Membership methods
-	addMembership(membership) {
-		this.memberships.push(membership);
-		return membership;
-	}
+    async addMembership(membership) {
+        try {
+            const response = await axios.post(`${BASE_URL}/memberships`, membership);
+            return response.data;
+        } catch (error) {
+            console.error('Error adding membership:', error.message);
+            throw error;
+        }
+    }
 
-	getMemberships() {
-		return this.memberships;
-	}
+    // Class methods
+    async getClasses() {
+        try {
+            const response = await axios.get(`${BASE_URL}/classes`);
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching classes:', error.message);
+            throw error;
+        }
+    }
 
-	// Class methods
-	addClass(classInstance) {
-		this.classes.push(classInstance);
-		return classInstance;
-	}
+    async addClass(classInstance) {
+        try {
+            const response = await axios.post(`${BASE_URL}/classes`, classInstance);
+            return response.data;
+        } catch (error) {
+            console.error('Error adding class:', error.message);
+            throw error;
+        }
+    }
 
-	getClasses() {
-		return this.classes;
-	}
+    // Trainer methods
+    async getTrainers() {
+        try {
+            const response = await axios.get(`${BASE_URL}/trainers`);
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching trainers:', error.message);
+            throw error;
+        }
+    }
 
-	// Trainer methods
-	addTrainer(trainer) {
-		this.trainers.push(trainer);
-		return trainer;
-	}
-
-	getTrainers() {
-		return this.trainers;
-	}
+    async addTrainer(trainer) {
+        try {
+            const response = await axios.post(`${BASE_URL}/trainers`, trainer);
+            return response.data;
+        } catch (error) {
+            console.error('Error adding trainer:', error.message);
+            throw error;
+        }
+    }
 }
 
-module.exports = new Database(); 
+module.exports = new Database();

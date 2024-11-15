@@ -1,26 +1,25 @@
 {
-	"name": "backend",
+	"name": "gym-membership-app",
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
 		"start": "nodemon index.js",
-		"json-server": "json-server --watch db.json --port 5000"
+		"json-server": "json-server --watch db.json --port 5001"
 	},
 	"keywords": [
-		"task-manager",
+		"gym",
+		"membership",
 		"nodejs",
-		"domain-driven-design",
-		"task-tracker",
-		"express",
-		"project-management"
+		"express"
 	],
 	"author": "",
 	"license": "MIT",
-	"description": "A task management application built with Node.js, following Domain-Driven Design principles. This app allows users to organize tasks into categories, track due dates, and manage priorities, providing a scalable foundation for real-world project organization.",
+	"description": "A gym membership application built with Node.js, allowing users to manage memberships, classes, and trainers.",
 	"dependencies": {
 		"axios": "^1.7.7",
 		"dotenv": "^16.4.5",
-		"express": "^4.21.1"
+		"express": "^4.21.1",
+		"express-validator": "^7.2.0"
 	},
 	"devDependencies": {
 		"json-server": "^1.0.0-beta.3",
